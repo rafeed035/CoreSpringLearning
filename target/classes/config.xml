@@ -28,7 +28,7 @@
         </property>
     </bean>
 
-<!--    using p schema-->
+<!--    using p configuration-->
     <bean
             id="student3"
             class="Entity.Student"
