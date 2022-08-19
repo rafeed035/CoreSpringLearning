@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context">
+
+    <bean id = "teacher1" class="Entity.Teacher">
+        <property name="teacherId" value="1"/>
+        <property name="teacherName" value="Rafeed"/>
+        <property name="phoneNumber">
+            <list>
+                <value>01725344591</value>
+                <value>01303930525</value>
+                <null/>
+            </list>
+        </property>
+        <property name="address">
+            <set>
+                <value>Fulbari</value>
+                <value>Mohakhali</value>
+            </set>
+        </property>
+        <property name="courses">
+           <map>
+               <entry key="Spring" value="2months"/>
+               <entry key="Spring Boot" value="2months"/>
+           </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="semester">Fall</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
