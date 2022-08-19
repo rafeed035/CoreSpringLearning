@@ -1,3 +1,4 @@
+import Entity.Course;
 import Entity.Student;
 import Entity.Teacher;
 import org.springframework.context.ApplicationContext;
@@ -7,6 +8,7 @@ public class MainClass {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("collectionconfig.xml");
+        ApplicationContext applicationContext1 = new ClassPathXmlApplicationContext("referenceconfig.xml");
 
         Student student1 = (Student) context.getBean("student1");
         System.out.println(student1);
@@ -19,5 +21,8 @@ public class MainClass {
 
         Teacher teacher1 = (Teacher) applicationContext.getBean("teacher1");
         System.out.println(teacher1);
+
+        Course course = (Course) applicationContext1.getBean("course1");
+        System.out.println(course);
     }
 }
