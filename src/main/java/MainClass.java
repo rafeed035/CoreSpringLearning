@@ -1,4 +1,5 @@
 import Entity.Course;
+import Entity.Department;
 import Entity.Student;
 import Entity.Teacher;
 import org.springframework.context.ApplicationContext;
@@ -9,6 +10,7 @@ public class MainClass {
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("collectionconfig.xml");
         ApplicationContext applicationContext1 = new ClassPathXmlApplicationContext("referenceconfig.xml");
+        ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("constructorConfig.xml");
 
         Student student1 = (Student) context.getBean("student1");
         System.out.println(student1);
@@ -24,5 +26,8 @@ public class MainClass {
 
         Course course = (Course) applicationContext1.getBean("course1");
         System.out.println(course);
+
+        Department department = (Department) applicationContext2.getBean("department1");
+        System.out.println(department);
     }
 }
