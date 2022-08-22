@@ -1,8 +1,6 @@
-import Entity.Course;
-import Entity.Department;
-import Entity.Student;
-import Entity.Teacher;
+import Entity.*;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainClass {
@@ -11,6 +9,8 @@ public class MainClass {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("collectionconfig.xml");
         ApplicationContext applicationContext1 = new ClassPathXmlApplicationContext("referenceconfig.xml");
         ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("constructorConfig.xml");
+        AbstractApplicationContext abstractApplicationContext = new ClassPathXmlApplicationContext("beanLifeCycleInterface.xml");
+        abstractApplicationContext.registerShutdownHook();
 
         Student student1 = (Student) context.getBean("student1");
         System.out.println(student1);
@@ -29,5 +29,8 @@ public class MainClass {
 
         Department department = (Department) applicationContext2.getBean("department1");
         System.out.println(department);
+
+        Building building = (Building) abstractApplicationContext.getBean("building1");
+        System.out.println(building);
     }
 }
