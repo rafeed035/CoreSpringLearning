@@ -43,8 +43,8 @@ public class MainClass {
         System.out.println();
         System.out.println(building);
 
-//        Staff staff = (Staff) abstractApplicationContext1.getBean("staff1");
-//        System.out.println(staff);
+        Staff staff = (Staff) abstractApplicationContext1.getBean("staff1");
+        System.out.println(staff);
 
         Lab lab = (Lab) abstractApplicationContext2.getBean("lab1");
         System.out.println(lab);
