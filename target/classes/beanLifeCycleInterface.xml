@@ -8,20 +8,12 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context">
 
-    <import resource="referenceconfig.xml"/>
-    <import resource="collectionconfig.xml"/>
-
-    <bean id = "department1" class="Entity.Department">
+    <bean id="building1" class="Entity.Building">
         <constructor-arg type="int">
             <value>1</value>
         </constructor-arg>
         <constructor-arg>
-            <value>CSE</value>
-        </constructor-arg>
-        <constructor-arg>
-            <list>
-                <ref bean="course1"/>
-            </list>
+            <value>CSE building</value>
         </constructor-arg>
     </bean>
 
