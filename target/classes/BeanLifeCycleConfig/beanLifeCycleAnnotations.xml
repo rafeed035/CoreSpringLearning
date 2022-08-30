@@ -10,7 +10,7 @@
 
     <context:annotation-config/>
 
-    <bean id="staff1" class="Entity.Staff">
+    <bean id="staff1" class="XML.Entity.Staff">
         <constructor-arg type="int">
             <value>1</value>
         </constructor-arg>

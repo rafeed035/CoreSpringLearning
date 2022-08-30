@@ -10,17 +10,17 @@
 
     <context:annotation-config/>
 
-    <bean name="course" class="AutowirePractice.Course">
+    <bean name="course" class="XML.AutowirePractice.Course">
         <property name="courseId" value="1"/>
         <property name="courseName" value="Spring"/>
     </bean>
 
-    <bean name="teacher1" class="AutowirePractice.Teacher" autowire="byName">
+    <bean name="teacher1" class="XML.AutowirePractice.Teacher" autowire="byName">
         <property name="teacherId" value="1"/>
         <property name="teacherName" value="Rafeed"/>
     </bean>
 
-    <bean name="department" class="AutowirePractice.Department">
+    <bean name="department" class="XML.AutowirePractice.Department">
         <property name="departmentId" value="1"/>
         <property name="departmentName" value="CSE"/>
     </bean>

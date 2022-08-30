@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context">
 
-    <bean id="building1" class="Entity.Building">
+    <bean id="building1" class="XML.Entity.Building">
         <constructor-arg type="int">
             <value>1</value>
         </constructor-arg>

@@ -11,7 +11,7 @@
     <import resource="referenceconfig.xml"/>
     <import resource="collectionconfig.xml"/>
 
-    <bean id = "department1" class="Entity.Department">
+    <bean id = "department1" class="XML.Entity.Department">
         <constructor-arg type="int">
             <value>1</value>
         </constructor-arg>

@@ -18,11 +18,11 @@
         <value>Souvik</value>
     </util:list>
 
-    <bean class="StandaloneCollections.Person" name="person1">
+    <bean class="XML.StandaloneCollections.Person" name="person1">
         <property name="friendList" ref="bestFriends"/>
     </bean>
 
-    <bean class="StandaloneCollections.Person" name="person2">
+    <bean class="XML.StandaloneCollections.Person" name="person2">
         <property name="friendList" ref="bestFriends"/>
     </bean>
 

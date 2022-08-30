@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context">
 
-    <bean id = "teacher1" class="Entity.Teacher">
+    <bean id = "teacher1" class="XML.Entity.Teacher">
         <property name="teacherId" value="1"/>
         <property name="teacherName" value="Rafeed"/>
         <property name="phoneNumber">

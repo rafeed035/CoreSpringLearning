@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context">
 
-    <bean class="Entity.Lab" id="lab1" init-method="init" destroy-method="destroy">
+    <bean class="XML.Entity.Lab" id="lab1" init-method="init" destroy-method="destroy">
         <constructor-arg type="int">
             <value>1</value>
         </constructor-arg>

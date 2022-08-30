@@ -13,7 +13,7 @@
 
     <bean
         id = "course1"
-        class="Entity.Course"
+        class="XML.Entity.Course"
         p:courseId="1"
         p:courseName="Spring"
         p:teacher-ref="teacher1"
