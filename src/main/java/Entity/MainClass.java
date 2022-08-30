@@ -1,17 +1,18 @@
-import Entity.*;
+package Entity;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainClass {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("collectionconfig.xml");
-        ApplicationContext applicationContext1 = new ClassPathXmlApplicationContext("referenceconfig.xml");
-        ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("constructorConfig.xml");
-        AbstractApplicationContext abstractApplicationContext = new ClassPathXmlApplicationContext("beanLifeCycleInterface.xml");
-        AbstractApplicationContext abstractApplicationContext1 = new ClassPathXmlApplicationContext("beanLifeCycleAnnotations.xml");
-        AbstractApplicationContext abstractApplicationContext2 = new ClassPathXmlApplicationContext("beanLifeCycleXml.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Config/config.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Config/collectionconfig.xml");
+        ApplicationContext applicationContext1 = new ClassPathXmlApplicationContext("Config/referenceconfig.xml");
+        ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("Config/constructorConfig.xml");
+        AbstractApplicationContext abstractApplicationContext = new ClassPathXmlApplicationContext("BeanLifeCycleConfig/beanLifeCycleInterface.xml");
+        AbstractApplicationContext abstractApplicationContext1 = new ClassPathXmlApplicationContext("BeanLifeCycleConfig/beanLifeCycleAnnotations.xml");
+        AbstractApplicationContext abstractApplicationContext2 = new ClassPathXmlApplicationContext("BeanLifeCycleConfig/beanLifeCycleXml.xml");
         abstractApplicationContext.registerShutdownHook();
         abstractApplicationContext1.registerShutdownHook();
         abstractApplicationContext2.registerShutdownHook();
@@ -48,7 +49,5 @@ public class MainClass {
 
         Lab lab = (Lab) abstractApplicationContext2.getBean("lab1");
         System.out.println(lab);
-
-
     }
 }

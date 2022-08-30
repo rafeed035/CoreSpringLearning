@@ -9,7 +9,7 @@
         http://www.springframework.org/schema/context">
 
 
-    <import resource="classpath:collectionconfig.xml"/>
+    <import resource="classpath:Config/collectionconfig.xml"/>
 
     <bean
         id = "course1"
