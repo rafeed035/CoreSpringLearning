@@ -1,7 +1,5 @@
 package Annotations;
 
-import org.springframework.beans.factory.annotation.Value;
-
 public class Category {
 
     private int categoryId;

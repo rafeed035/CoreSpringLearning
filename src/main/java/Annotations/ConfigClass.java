@@ -1,7 +1,6 @@
 package Annotations;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -9,7 +8,9 @@ public class ConfigClass {
 
     @Bean
     public Product getProduct(){
-        return new Product( 1, "abc", getCategory());
+        return new Product( 1,
+                "abc",
+                getCategory());
     }
 
     @Bean
