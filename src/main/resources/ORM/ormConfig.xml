@@ -20,7 +20,7 @@
         <property name="password" value="rafeed2030"/>
     </bean>
     
-    <bean class = "org.springframework.orm.hibernate5.LocalSessionFactoryBean" name = "localSessionFactoryBean">
+        <bean class = "org.springframework.orm.hibernate5.LocalSessionFactoryBean" name = "localSessionFactoryBean">
         <property name="dataSource" ref="driverManagerDataSource"/>
         <property name="hibernateProperties">
             <props>

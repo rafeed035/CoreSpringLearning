@@ -2,22 +2,19 @@ package SpringORM;
 
 import SpringORM.Enity.Student;
 import SpringORM.Repository.StudentRepository;
-import org.hibernate.Hibernate;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
 import java.util.List;
-import java.util.Properties;
 
 public class SpringOrmMain {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("ORM/ormConfig.xml");
         StudentRepository studentRepository = applicationContext.getBean("studentRepository", StudentRepository.class);
 
-        Student student = new Student(6,
-                "Shakil",
-                "dhaka");
+        Student student = new Student(7,
+                "Shahariar",
+                "Fulbari");
         int r = studentRepository.insert(student);
         System.out.println(r);
 
@@ -31,7 +28,7 @@ public class SpringOrmMain {
             System.out.println(studentList.get(i).getStudentCity());
         }
 
-        studentRepository.deleteStudent(6);
+        studentRepository.deleteStudent(5);
 
         Student student1 = new Student();
         student1.setStudentId(2);
